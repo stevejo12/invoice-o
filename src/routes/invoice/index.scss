@@ -1,0 +1,31 @@
+.invoice {
+  width: 800px;
+  margin: 0 auto;
+
+  .invoice__header {
+    display: flex;
+    justify-content: space-between;
+
+    .invoice__title {
+      font-size: 1.5rem;
+    }
+
+    .invoice__info {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+      &-text {
+        font-size: 1rem;
+      }
+
+      &-number {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .invoice__form {
+    margin-top: 1.5rem;
+  }
+}
