@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import "./index.scss";
+import Input from "../../components/Input";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -27,21 +28,19 @@ const Login = () => {
       </Link>
       <h3 className="login__subHeader">Website to easily generate invoice</h3>
       <form className="login__form" onSubmit={handleLogin}>
-        <label htmlFor="email">Email</label>
-        <input
-          className="input-primary"
-          type="text"
+        <Input
+          inputType="text"
           name="email"
+          label="Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          setValue={setEmail}
         />
-        <label htmlFor="password">Password</label>
-        <input
-          className="input-primary"
-          type="password"
+        <Input
+          inputType="password"
           name="password"
+          label="Password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          setValue={setPassword}
         />
         <button className="btn-primary" type="submit">
           Login
