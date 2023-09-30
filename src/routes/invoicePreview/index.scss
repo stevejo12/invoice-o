@@ -1,0 +1,115 @@
+.invoicePreview {
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  .invoicePreview__header {
+    display: flex;
+    justify-content: space-between;
+
+    .invoicePreview__title {
+      font-size: 1.5rem;
+    }
+
+    .invoicePreview__invoiceInfo {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+      &-text {
+        font-size: 1rem;
+      }
+
+      &-number {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .invoicePreview__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 24px;
+
+    > div {
+      padding: 5px;
+    }
+
+    .invoicePreview__info-seller {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      
+      .invoicePreview__info-seller-header {
+        margin-bottom: 4px;
+      }
+
+      .invoicePreview__info-seller-grid {
+        display: flex;
+        font-weight: normal;
+
+        span {
+          width: 76px;
+          min-width: 76px;
+        }
+
+        p {
+          font-weight: bold;
+
+          &::before {
+            content: ": ";
+          }
+        }
+      }
+    }
+
+    .invoicePreview__info-buyer {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      
+      .invoicePreview__info-buyer-header {
+        margin-bottom: 4px;
+      }
+  
+      .invoicePreview__info-buyer-grid {
+        display: flex;
+        font-weight: normal;
+  
+        span {
+          width: 115px;
+          min-width: 115px;
+        }
+  
+        p {
+          font-weight: bold;
+
+          &::before {
+            content: ": ";
+          }
+        }
+
+        .buyer-info {
+          width: 100%;
+
+          .buyer-info-phone {
+            font-weight: normal;
+          }
+        }
+
+        .address {
+          font-weight: normal;
+
+          &::before {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+
+  .invoicePreview__products {
+    display: flex;
+    flex-direction: column;
+  }
+}

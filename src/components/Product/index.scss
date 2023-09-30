@@ -1,0 +1,23 @@
+.product {
+  display: flex;
+  width: 100%;
+  padding: 18px 16px;
+  text-align: right;
+
+  .product-info {
+    width: 52%;
+    text-align: left;
+  }
+
+  .product-total {
+    width: 8%;
+  }
+
+  .product-priceEach {
+    width: 20%;
+  }
+
+  .product-priceTotal {
+    width: 20%;
+  }
+}
