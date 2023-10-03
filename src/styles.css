@@ -34,3 +34,15 @@ a {
   font-size: 14px;
   line-height: 1.5;
 }
+
+.dashed-bottom {
+  border-bottom: thin dashed var(--N75,#E5E7E9);
+}
+
+.dashed-top {
+  border-top: thin dashed var(--N75,#E5E7E9);
+}
+
+.text-bold {
+  font-weight: bold;
+}

@@ -108,8 +108,106 @@
     }
   }
 
-  .invoicePreview__products {
+  .priceBreakdown {
+    margin-left: auto;
+    width: 48%;
+    padding-right: 16px;
+    
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      
+      &:first-child {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      &:not(:first-child) {
+        padding: 8px 0;
+      }
+    }
+
+    .totalItems, .totalSpending, .totalBill {
+      font-weight: bold;
+    }
+
+    .deliveryFeeBreakdown {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .promo-typeOne {
+      display: inline-block;
+      width: 100%;
+
+      .promoLabel {
+        display: inline-flex;
+        font-weight: bold;
+        background-color: rgba(#ee4d2d, 0.3);
+        color: var(--primary-color);
+        padding: 2px 4px;
+      }
+
+      .promoDescription {
+        display: flex;
+        justify-content: space-between;
+        margin: 3px 0 8px 0;
+      }
+    }
+
+    .promo-typeTwo {
+      display: flex;
+
+      .promoCompany {
+        background-color: rgba(#ee4d2d, 0.3);
+        color: var(--primary-color);
+        padding: 2px 4px;
+        font-weight: bold;
+        display: inline;
+      }
+
+      .promoLabel-name {
+        margin: 3px 0 8px 0;
+      }
+
+      .promoValue {
+        text-align: right;
+      }
+    }
+  }
+
+  .deliveryInfo {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 12px;
+
+    .title-description {
+      font-size: 0.75rem;
+      color: rgba(49,53,59,0.68);
+    }
+
+    > div > p {
+      margin-bottom: 8px;
+    }
+
+    .courierInfo {
+      width: 52%;
+    }
+
+    .paymentMethod {
+      width: 48%;
+    }
   }
 }

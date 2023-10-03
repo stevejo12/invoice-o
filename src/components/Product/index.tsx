@@ -1,16 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import "./index.scss";
 
-const Product = () => {
+interface IProps {
+  id: number;
+  info: string;
+  productURL: string;
+  quantity: number;
+  unitPrice: number;
+  totalPrice: number;
+}
+
+const Product = ({ 
+  id, info, productURL, quantity, unitPrice, totalPrice
+}: IProps) => {
   return (
     <div className="product">
-      <div className="product-info">
-        Daging Babi Giling / Pork Minced (Daging Paha Giling) 500gr
+      <Link to={productURL} className="product-info">
+        {info}
+      </Link>
+      <div className="product-total">
+        {quantity}
       </div>
-      <div className="product-total">1</div>
-      <div className="product-priceEach">Rp38.990</div>
-      <div className="product-priceTotal">Rp38.990</div>
+      <div className="product-priceEach">
+        {unitPrice}
+      </div>
+      <div className="product-priceTotal">
+        {totalPrice}
+      </div>
     </div>
   )
 }
